@@ -47,11 +47,43 @@ body {
 .hero .profile img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--primary-color);}
 .role{font-size:1.1rem;color:#555;}
 .cta{margin-top:20px;display:flex;gap:15px;}
-.btn{padding:10px 20px;border-radius:5px;font-weight:600;cursor:pointer;transition:all .3s;}
+
+.btn,
+button{
+  padding:10px 20px;
+  border-radius:5px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .3s;
+  border:none;
+  outline:none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover,
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.btn:active,
+button:active{
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.btn:focus,
+button:focus{
+  outline:none;
+}
+
+/* mantém suas variações */
 .btn.primary{background:var(--primary-color);color:#fff;}
 .btn.primary:hover{background:#005f86;}
+
 .btn.secondary{background:var(--secondary-bg);color:var(--text-color);}
 .btn.secondary:hover{background:#bdbdbd;}
+
 
 /* SOCIAL */
 .social{margin-top:20px;display:flex;align-items:center;gap:15px;}
@@ -83,8 +115,35 @@ body {
 
 /* PROJETOS */
 .tabs{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
-.tab-btn{padding:10px 20px;border:none;background:#ddd;border-radius:5px;cursor:pointer;transition:background .3s;}
-.tab-btn.active{background:var(--primary-color);color:#fff;}
+.tab-btn{
+  padding:8px 12px;
+  border:none;
+  background:none;
+  border-radius:0;
+  cursor:pointer;
+  transition:all .3s;
+  box-shadow:none;
+
+  /* estilo pedido */
+  text-transform: uppercase;
+  font-size:0.85rem;
+  letter-spacing:0.5px;
+  color:#888; /* cinza */
+}
+
+.tab-btn:hover{
+  color:var(--primary-color);
+  box-shadow: none;
+}
+
+.tab-btn.active{
+  color:var(--primary-color); /* azul */
+  border-bottom:2px solid var(--primary-color);
+}
+button:focus{
+  outline:none;
+}
+
 .tab-content{display:none;margin-top:20px;}
 .tab-content.active{display:block;}
 .tab-content .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
