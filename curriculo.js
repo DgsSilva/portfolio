@@ -211,13 +211,13 @@ yRight += 12;
 
 const edu = [
   {
-    course: 'Sistemas e Mídias Digitais',
-    school: 'Universidade Federal do Ceará',
+    course: 'Bacharelado em Sistemas e Mídias Digitais',
+    school: 'Universidade Federal do Ceará - UFC',
     desc: `2017 – 2021`
   },
   {
-    course: 'Informática',
-    school: 'Instituto Federal do Ceará',
+    course: 'Curso Técnico Integrado de Informática',
+    school: 'Instituto Federal do Ceará - IFCE',
     desc: `2008 – 2012`
   }
 ];
