@@ -438,3 +438,17 @@ textarea:focus {
 html {
   scroll-behavior: smooth;
 }
+
+/*Sobrescreve apenas no Dark Mode*/
+
+body.dark .md-card {
+  background-color: #1e1e1e;
+}
+
+body.dark .md-card-company {
+  color: #ddd;
+}
+
+body.dark .md-card-dates {
+  color: #aaa;
+}
