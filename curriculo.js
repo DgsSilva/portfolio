@@ -217,7 +217,7 @@ const edu = [
   },
   {
     course: 'Curso Técnico Integrado de Informática',
-    school: 'Instituto Federal do Ceará - IFCE',
+    school: 'Instituto Federal de Educação, Ciência e Tecnologia do Ceará - IFCE',
     desc: `2008 – 2012`
   }
 ];
