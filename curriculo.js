@@ -129,7 +129,7 @@ Inglês: Intermediário`,
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
   doc.setTextColor(...accent);
-  doc.text('Experiência', 75, yRight);
+  doc.text('Experiência Profissional', 75, yRight);
 
   doc.setDrawColor(...accent);
   doc.setLineWidth(0.5);
@@ -201,7 +201,7 @@ Trabalhei no laboratório LIT desenvolvendo animações 2D para um jogo, e como 
 doc.setFont('helvetica', 'bold');
 doc.setFontSize(16);
 doc.setTextColor(...accent);
-doc.text('Educação', 75, yRight);
+doc.text('Formação acadêmica', 75, yRight);
 
 doc.setDrawColor(...accent);
 doc.setLineWidth(0.5);
