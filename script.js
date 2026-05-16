@@ -111,53 +111,125 @@ btnVerMais.addEventListener('click', () => {
   }
 });
 
-//BOTÕES SEÇÃO DE PROJETOS
+// BOTÕES SEÇÃO DE PROJETOS — cada aba controla apenas seus próprios cards ocultos
+document.querySelectorAll('.tab-content').forEach(tab => {
+  const btnWrapper = tab.querySelector('.btn-wrapper');
+  if (!btnWrapper) return;
 
+  const btn = btnWrapper.querySelector('button');
+  if (!btn) return;
 
-  const btn = document.getElementById('toggleBtn');
-  const hiddenCards = document.querySelectorAll('.hidden-card');
-
+  const hiddenCards = Array.from(tab.querySelectorAll('.hidden-card'));
   let expanded = false;
 
   btn.addEventListener('click', () => {
     expanded = !expanded;
-
     hiddenCards.forEach(card => {
       card.style.display = expanded ? 'block' : 'none';
     });
-
     btn.textContent = expanded ? 'Ver menos' : 'Ver mais';
   });
+});
 
-  const btn2 = document.getElementById('toggleBtn2');
-  const hiddenCards2 = document.querySelectorAll('.hidden-card');
+// Modal de projetos
+const projectModal = document.getElementById('project-modal');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalClose = document.getElementById('project-modal-close');
+const modalImage = document.getElementById('modal-image');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalPrev = document.getElementById('modal-prev');
+const modalNext = document.getElementById('modal-next');
+const modalDots = document.getElementById('modal-dots');
 
-  let expanded2 = false;
+let currentGallery = [];
+let currentIndex = 0;
 
-  btn2.addEventListener('click', () => {
-    expanded2 = !expanded2;
+function updateModal() {
+  const imageUrl = currentGallery[currentIndex];
+  modalImage.src = imageUrl;
+  modalImage.alt = modalTitle.textContent;
 
-    hiddenCards2.forEach(card => {
-      card.style.display = expanded2 ? 'block' : 'none';
+  modalPrev.disabled = currentGallery.length <= 1;
+  modalNext.disabled = currentGallery.length <= 1;
+
+  modalDots.innerHTML = currentGallery.map((_, index) => {
+    return `<button type="button" class="${index === currentIndex ? 'active' : ''}" data-index="${index}" aria-label="Ir para imagem ${index + 1}"></button>`;
+  }).join('');
+
+  modalDots.querySelectorAll('button').forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = Number(dot.dataset.index);
+      updateModal();
     });
-
-    btn2.textContent = expanded2 ? 'Ver menos' : 'Ver mais';
   });
+}
 
-  const btn3 = document.getElementById('toggleBtn3');
-  const hiddenCards3 = document.querySelectorAll('.hidden-card');
+function openProjectModal(images, title, description) {
+  currentGallery = images;
+  currentIndex = 0;
+  modalTitle.textContent = title;
+  modalDescription.textContent = description;
+  projectModal.classList.add('active');
+  projectModal.removeAttribute('hidden');
+  updateModal();
+}
 
-  let expanded3 = false;
+function closeProjectModal() {
+  projectModal.classList.remove('active');
+  projectModal.setAttribute('hidden', '');
+}
 
-  btn3.addEventListener('click', () => {
-    expanded3 = !expanded3;
+modalClose.addEventListener('click', closeProjectModal);
+modalBackdrop.addEventListener('click', closeProjectModal);
+modalPrev.addEventListener('click', () => {
+  if (currentGallery.length <= 1) return;
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateModal();
+});
+modalNext.addEventListener('click', () => {
+  if (currentGallery.length <= 1) return;
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  updateModal();
+});
 
-    hiddenCards3.forEach(card => {
-      card.style.display = expanded3 ? 'block' : 'none';
-    });
-
-    btn3.textContent = expanded3 ? 'Ver menos' : 'Ver mais';
+document.querySelectorAll('#projetos .card button.btn.primary').forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const card = btn.closest('.card');
+    if (!card) return;
+    const img = card.querySelector('img');
+    if (!img) return;
+    const gallery = img.dataset.gallery
+      ? img.dataset.gallery.split(',').map(path => path.trim()).filter(Boolean)
+      : [img.src];
+    const title = card.querySelector('h3')?.textContent || '';
+    const description = card.querySelector('p')?.textContent || '';
+    openProjectModal(gallery, title, description);
   });
+});
+
+document.querySelectorAll('#projetos .card').forEach(card => {
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button')) return;
+    const link = card.querySelector('a.btn.primary');
+    if (link) {
+      const target = link.target || '_self';
+      window.open(link.href, target);
+      return;
+    }
+    const button = card.querySelector('button.btn.primary');
+    if (button) {
+      button.click();
+    }
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+    closeProjectModal();
+  }
+});
 
 
 // ===== SCROLL SUAVE =====
@@ -178,3 +250,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+

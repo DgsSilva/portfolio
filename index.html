@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Douglas Silva — Artista 2D</title>
+<title>Douglas Silva</title>
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
@@ -50,8 +50,9 @@
     <div class="cta">
       <a href="#projetos" class="btn primary">Ver projetos</a>
       <a href="#contato" class="btn secondary">Falar comigo</a>
+      <a href="#" class="btn primary" id="btn-curriculo-top" onclick="document.getElementById('btn-curriculo').click(); return false;">Baixar Currículo (PDF)</a>
     </div>
-
+    
     <div class="social">     
       <a href="https://www.linkedin.com/in/dgssilva/" target="_blank">
         <img src="images/linkedin-icon.svg" alt="Linkedin" class="social-icon">
@@ -67,9 +68,8 @@
 <!-- SOBRE -->
 <section id="sobre" class="sobre container">
   <h2>Sobre</h2>
-  <p>Olá! Sou Douglas Silva, artista 2D com mais de dois anos de experiência no desenvolvimento de jogos digitais para PC. Atuo principalmente na criação de concept art, incluindo personagens, ambientes e itens, além da produção de sprites e animações em pixel art.
-
-    Também tenho cerca de cinco anos de experiência profissional em UI/UX design, o que me permite contribuir na concepção de fluxos e interfaces para os jogos em que participo, unindo estética e usabilidade para criar experiências mais envolventes.</p>
+  <p>Olá! Sou Douglas Silva, um designer de UI/UX com cerca de 5 anos de experiência. Já projetei fluxos e interfaces para aplicativos em áreas como serviços de alimentação, comércio eletrônico, streaming, saúde, educação e jogos casuais para dispositivos móveis.<br><br>
+  Atualmente, trabalho como artista 2D, mais especificamente como Pixel Artist, criando sprites de personagens e ambientes, além de produzir animações 2D.</p>
 
   <div class="sobre-grid">
 
@@ -149,7 +149,7 @@
           <div class="md-card">
             <img src="images/logo-ufc.jpg" alt="Universidade Federal do Ceará Logo" class="md-card-img">
             <div class="md-card-content">
-              <h4>Universidade Federal do Ceará - UFC </h4>
+              <h4>Universidade Federal do Ceará - UFC</h4>
               <p>Bacharelado, Sistemas e Mídias Digitais | Mar de 2017 – Set de 2021</p>
             </div>
           </div>
@@ -157,7 +157,7 @@
           <div class="md-card">
             <img src="images/logo-ifce.jpg" alt="Instituto Federal do Ceará Logo" class="md-card-img">
             <div class="md-card-content">
-              <h4>Instituto Federal de Educação, Ciência e Tecnologia do Ceará - IFCE </h4>
+              <h4>Instituto Federal de Educação, Ciência e Tecnologia do Ceará - IFCE</h4>
               <p>Curso Técnico Integrado, Informática | 2008 – 2012</p>
             </div>
           </div>
@@ -207,268 +207,235 @@
     <!-- PRIMEIRA FILEIRA (visível) -->
 
       <div class="card">
-        <img src="images/bola_de_carne_cover.jpg" alt="Bola de Carne Character Design">
+        <img src="images/bola-de-carne/cover.jpg" alt="Bola de Carne Character Design" data-gallery="images/bola-de-carne/gallery1.jpg,images/bola-de-carne/gallery2.jpg,images/bola-de-carne/gallery3.jpg,images/bola-de-carne/gallery4.jpg">
         <div class="card-info">
             <h3>Bola de Carne | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/YGk60K" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/leo_cover.jpg" alt="Leo Character Design">
+        <img src="images/leo/cover.jpg" alt="Leo Character Design" data-gallery="images/leo/gallery1.jpg,images/leo/gallery2.jpg,images/leo/gallery3.jpg">
         <div class="card-info">
             <h3>Leo | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/0lGOwy" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/eles_cover.jpg" alt="Eles Character Design">
+        <img src="images/eles/cover.jpg" alt="Eles Character Design" data-gallery="images/eles/gallery1.jpg,images/eles/gallery2.jpg,images/eles/gallery3.jpg">
         <div class="card-info">
             <h3>"Eles" | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/XJZ2QD" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/gatos_game_cover.jpg" alt="Gatos de Rua Game">
-        <div class="card-info">
-            <h3>Gatos de Rua Game</h3>
-            <p>Link do Jogo</p>
-            <a href="https://rebuild-studio.itch.io/gatos-de-rua" target="_blank" class="btn primary">
-            Ver no Itch.io
-            </a>
-        </div>
-      </div>  
-
-      <div class="card">
-        <img src="images/gatos_scenarios_pixel_cover.jpg" alt="Animações de cenário em pixel art">
+        <img src="images/gatos-scenarios/cover.jpg" alt="Animações de cenário em pixel art" data-gallery="images/gatos-scenarios/gallery1.gif,images/gatos-scenarios/gallery2.gif,images/gatos-scenarios/gallery3.gif,images/gatos-scenarios/gallery4.gif,images/gatos-scenarios/gallery5.gif,images/gatos-scenarios/gallery6.gif,images/gatos-scenarios/gallery7.gif">
         <div class="card-info">
             <h3>Gatos de Rua Game: Scenario Concepts</h3>
             <p>Environment Art Concept</p>
-            <a href="https://www.artstation.com/artwork/2Bo4we" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/gatos_cats_pixel_cover.jpg" alt="Animações de personagem em pixel art">
+        <img src="images/gatos-cats/cover.jpg" alt="Animações de personagem em pixel art" data-gallery="images/gatos-cats/gallery1.gif,images/gatos-cats/gallery2.jpg,images/gatos-cats/gallery3.jpg,images/gatos-cats/gallery4.jpg,images/gatos-cats/gallery5.jpg">
         <div class="card-info">
             <h3>Gatos de Rua Game: Cats Concepts</h3>
             <p>Character Design | Pixel Art Animations</p>
-            <a href="https://www.artstation.com/artwork/lG2XBz" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/gatos_characters_pixel_cover.jpg" alt="Animações de personagem em pixel art">
+        <img src="images/gatos-characters/cover.jpg" alt="Animações de personagem em pixel art" data-gallery="images/gatos-characters/gallery1.gif,images/gatos-characters/gallery2.jpg,images/gatos-characters/gallery3.jpg,images/gatos-characters/gallery4.jpg,images/gatos-characters/gallery5.jpg">
         <div class="card-info">
             <h3>Gatos de Rua Game: Character Concepts</h3>
             <p>Character Design | Pixel Art Animations</p>
-            <a href="https://www.artstation.com/artwork/bgyPyk" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>    
 
       <div class="card">
-        <img src="images/andarilho_cover.jpg" alt="Andarilho Character Design">
+        <img src="images/andarilho/cover.jpg" alt="Andarilho Character Design" data-gallery="images/andarilho/gallery1.jpg,images/andarilho/gallery2.jpg,images/andarilho/gallery3.jpg">
         <div class="card-info">
             <h3>Andarilho | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/L4gv5R" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
- 
-    <!-- RESTANTE (oculto inicialmente) -->
 
-      <div class="card hidden-card">
-        <img src="images/francisca_cover.jpg" alt="Francisca Character Design">
+      <div class="card">
+        <img src="images/francisca/cover.jpg" alt="Francisca Character Design" data-gallery="images/francisca/gallery1.jpg,images/francisca/gallery2.jpg,images/francisca/gallery3.jpg,images/francisca/gallery4.jpg,images/francisca/gallery5.jpg">
         <div class="card-info">
             <h3>Francisca | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/a09bDz" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
+    <!-- RESTANTE (oculto inicialmente) -->
+
       <div class="card hidden-card">
-        <img src="images/jagunco_cover.jpg" alt="Jagunço Character Design">
+        <img src="images/jagunco/cover.jpg" alt="Jagunço Character Design" data-gallery="images/jagunco/gallery1.jpg,images/jagunco/gallery2.jpg,images/jagunco/gallery3.jpg">
         <div class="card-info">
             <h3>Jagunço | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/98POdQ" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/santa_lucia_cover.jpg" alt="Santa Lucia Character Design">
+        <img src="images/santa-lucia/cover.jpg" alt="Santa Lucia Character Design" data-gallery="images/santa-lucia/gallery1.jpg,images/santa-lucia/gallery2.jpg,images/santa-lucia/gallery3.jpg,images/santa-lucia/gallery4.jpg,images/santa-lucia/gallery5.jpg">
         <div class="card-info">
             <h3>Santa Lucia | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/8BZWGR" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/fortal_game_cover.jpg" alt="FortalStep Game">
-        <div class="card-info">
-            <h3>FortalStep - Prototype</h3>
-            <p>Link do Jogo</p>
-            <a href="https://pedro-gustavo-pgzim.itch.io/fortalstep" target="_blank" class="btn primary">
-            Ver no Itch.io
-            </a>
-        </div>
-      </div>
-
-      <div class="card hidden-card">
-        <img src="images/africano_pixel_cover.jpg" alt="Animações do personagem Africano em pixel art">
+        <img src="images/edu-africano/cover.jpg" alt="Animações do personagem Africano em pixel art" data-gallery="images/edu-africano/gallery1.gif,images/edu-africano/gallery2.gif">
         <div class="card-info">
             <h3>Edu Africano Breaking Dance Animations</h3>
             <p>Pixel Art Animations</p>
-            <a href="https://www.artstation.com/artwork/6LlPDV" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/isa_pixel_cover.jpg" alt="Animações da personagem Isa em pixel art">
+        <img src="images/isa/cover.jpg" alt="Animações da personagem Isa em pixel art" data-gallery="images/isa/gallery1.gif,images/isa/gallery2.gif,images/isa/gallery3.gif">
         <div class="card-info">
             <h3>Isa Breaking Dance Animations</h3>
             <p>Pixel Art Animations</p>
-            <a href="https://www.artstation.com/artwork/L4Z8al" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/shaolin_pixel_cover.jpg" alt="Animações do personagem Shaolin em pixel art">
+        <img src="images/shaolin/cover.jpg" alt="Animações do personagem Shaolin em pixel art" data-gallery="images/shaolin/gallery1.gif,images/shaolin/gallery2.gif,images/shaolin/gallery3.gif,images/shaolin/gallery4.jpg">
         <div class="card-info">
             <h3>Shaolin Breaking Dance Animations</h3>
             <p>Pixel Art Animations</p>
-            <a href="https://www.artstation.com/artwork/VJlPDn" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/hiw_game_cover.jpg" alt="Horror in Whitechapel Game">
-        <div class="card-info">
-            <h3>Horror in Whitechapel - Game</h3>
-            <p>Link do Jogo</p>
-            <a href="https://igda-fortaleza.itch.io/horror-in-whitechapel" target="_blank" class="btn primary">
-            Ver no Itch.io
-            </a>
-        </div>
-      </div>
-
-      <div class="card hidden-card">
-        <img src="images/jack_cover.jpg" alt="Jack the Ripper Character Design">
+        <img src="images/jack/cover.jpg" alt="Jack the Ripper Character Design" data-gallery="images/jack/gallery1.jpg,images/jack/gallery2.jpg,images/jack/gallery3.jpg">
         <div class="card-info">
             <h3>Jack The Ripper | Horror in Whitechapel Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/rJ5O8O" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/sophie_cover.jpg" alt="Sophie Character Design">
+        <img src="images/sophie/cover.jpg" alt="Sophie Character Design" data-gallery="images/sophie/gallery1.jpg,images/sophie/gallery2.jpg,images/sophie/gallery3.jpg">
         <div class="card-info">
             <h3>Sophie | Horror in Whitechapel Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/g0v1BP" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
     
       <div class="card hidden-card">
-        <img src="images/pokemon_pixel_cover.jpg" alt="Sprites isométricos de pokemon em pixel art">
+        <img src="images/pokemon-fire-red/cover.jpg" alt="Sprites isométricos de pokemon em pixel art" data-gallery="images/pokemon-fire-red/gallery1.jpg,images/pokemon-fire-red/gallery2.jpg,images/pokemon-fire-red/gallery3.jpg,images/pokemon-fire-red/gallery4.jpg,images/pokemon-fire-red/gallery5.jpg,images/pokemon-fire-red/gallery6.jpg,images/pokemon-fire-red/gallery7.jpg,images/pokemon-fire-red/gallery8.jpg">
         <div class="card-info">
           <h3>Pokemon Fire Red Reimagined</h3>
           <p>Isometric Game Concept</p>
-          <a href="https://www.artstation.com/artwork/Ry86Zy" target="_blank" class="btn primary">
-            Ver no ArtStation
-          </a>
+          <button type="button" class="btn primary">
+            Ver projeto
+          </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/pokelike_pixel_cover.jpg" alt="Sprite de personagens estilo pokemon em pixel art">
+        <img src="images/pokelike/cover.jpg" alt="Sprite de personagens estilo pokemon em pixel art" data-gallery="images/pokelike/gallery1.gif,images/pokelike/gallery2.gif">
         <div class="card-info">
           <h3> Pokelike | Fakepokemon</h3>
           <p>Game Project</p>
-          <a href="https://www.artstation.com/artwork/zPwgk6" target="_blank" class="btn primary">
-            Ver no ArtStation
-          </a>
+          <button type="button" class="btn primary">
+            Ver projeto
+          </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/popportal_pixel_cover.jpg" alt="Animações do jogo PopPortal em pixel art">
+        <img src="images/popportal/cover.jpg" alt="Animações do jogo PopPortal em pixel art" data-gallery="images/popportal/gallery1.gif,images/popportal/gallery2.gif">
         <div class="card-info">
           <h3>POP Portal Game </h3>
           <p>Pixel Art Animations | Sprites</p>
-          <a href="https://www.artstation.com/artwork/xDRgZX" target="_blank" class="btn primary">
-            Ver no ArtStation
-          </a>
+          <button type="button" class="btn primary">
+            Ver projeto
+          </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/hiw_cover.jpg" alt="Horror in Whitechapel">
+        <img src="images/horror-in-whitechapel/cover.jpg" alt="Horror in Whitechapel" data-gallery="images/horror-in-whitechapel/gallery1.jpg,images/horror-in-whitechapel/gallery2.jpg,images/horror-in-whitechapel/gallery3.jpg,images/horror-in-whitechapel/gallery4.jpg,images/horror-in-whitechapel/gallery5.jpg,images/horror-in-whitechapel/gallery6.jpg,images/horror-in-whitechapel/gallery7.jpg,images/horror-in-whitechapel/gallery8.jpg,images/horror-in-whitechapel/gallery9.jpg,images/horror-in-whitechapel/gallery10.jpg,images/horror-in-whitechapel/gallery11.jpg,images/horror-in-whitechapel/gallery12.jpg,images/horror-in-whitechapel/gallery13.jpg,images/horror-in-whitechapel/gallery14.jpg,images/horror-in-whitechapel/gallery15.jpg,images/horror-in-whitechapel/gallery16.jpg,images/horror-in-whitechapel/gallery17.jpg,images/horror-in-whitechapel/gallery18.jpg,images/horror-in-whitechapel/gallery19.jpg">
         <div class="card-info">
             <h3>Horror in Whitechapel</h3>
             <p>Game UI & Visual Identity</p>
-            <a href="https://www.behance.net/gallery/244441983/Horror-in-Whitechapel-Game-UI-Visual-Identity" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/coup_zodiac_cover.jpg" alt="Coup Zodiac">
+        <img src="images/coup-zodiac/cover.jpg" alt="Coup Zodiac" data-gallery="images/coup-zodiac/gallery1.jpg,images/coup-zodiac/gallery2.jpg,images/coup-zodiac/gallery3.jpg,images/coup-zodiac/gallery4.jpg,images/coup-zodiac/gallery5.jpg,images/coup-zodiac/gallery6.jpg,images/coup-zodiac/gallery7.jpg">
         <div class="card-info">
             <h3>Coup Zodiac</h3>
             <p>Game Concept | UI App Mobile </p>
-            <a href="https://www.behance.net/gallery/130515807/Coup-Zodiac-Game-Concept" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/wonder_sky_cover.jpg" alt="Wonder Sky">
+        <img src="images/wonder-sky/cover.jpg" alt="Wonder Sky" data-gallery="images/wonder-sky/gallery1.jpg,images/wonder-sky/gallery2.jpg,images/wonder-sky/gallery3.jpg,images/wonder-sky/gallery4.jpg,images/wonder-sky/gallery5.gif">
         <div class="card-info">
             <h3>Wonder Sky</h3>
             <p>Game Concept | UI App Mobile</p>
-            <a href="https://www.behance.net/gallery/59438643/Wander-Sky-Game-Concept" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
@@ -489,102 +456,102 @@
     <div class="grid">
 
       <div class="card">
-        <img src="images/bola_de_carne_cover.jpg" alt="Bola de Carne Character Design">
+        <img src="images/bola-de-carne/cover.jpg" alt="Bola de Carne Character Design" data-gallery="images/bola-de-carne/gallery1.jpg,images/bola-de-carne/gallery2.jpg,images/bola-de-carne/gallery3.jpg,images/bola-de-carne/gallery4.jpg">
         <div class="card-info">
             <h3>Bola de Carne | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/YGk60K" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/leo_cover.jpg" alt="Leo Character Design">
+        <img src="images/leo/cover.jpg" alt="Leo Character Design" data-gallery="images/leo/gallery1.jpg,images/leo/gallery2.jpg,images/leo/gallery3.jpg">
         <div class="card-info">
             <h3>Leo | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/0lGOwy" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/eles_cover.jpg" alt="Eles Character Design">
+        <img src="images/eles/cover.jpg" alt="Eles Character Design" data-gallery="images/eles/gallery1.jpg,images/eles/gallery2.jpg,images/eles/gallery3.jpg">
         <div class="card-info">
             <h3>"Eles" | QG Queer - Horro Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/XJZ2QD" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/andarilho_cover.jpg" alt="Andarilho Character Design">
+        <img src="images/andarilho/cover.jpg" alt="Andarilho Character Design" data-gallery="images/andarilho/gallery1.jpg,images/andarilho/gallery2.jpg,images/andarilho/gallery3.jpg">
         <div class="card-info">
             <h3>Andarilho | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/L4gv5R" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
  
 
        <div class="card">
-        <img src="images/francisca_cover.jpg" alt="Francisca Character Design">
+        <img src="images/francisca/cover.jpg" alt="Francisca Character Design" data-gallery="images/francisca/gallery1.jpg,images/francisca/gallery2.jpg,images/francisca/gallery3.jpg,images/francisca/gallery4.jpg,images/francisca/gallery5.jpg">
         <div class="card-info">
             <h3>Francisca | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/a09bDz" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
       
       <div class="card">
-        <img src="images/jagunco_cover.jpg" alt="Jagunço Character Design">
+        <img src="images/jagunco/cover.jpg" alt="Jagunço Character Design" data-gallery="images/jagunco/gallery1.jpg,images/jagunco/gallery2.jpg,images/jagunco/gallery3.jpg">
         <div class="card-info">
             <h3>Jagunço | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/98POdQ" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/santa_lucia_cover.jpg" alt="Santa Lucia Character Design">
+        <img src="images/santa-lucia/cover.jpg" alt="Santa Lucia Character Design" data-gallery="images/santa-lucia/gallery1.jpg,images/santa-lucia/gallery2.jpg,images/santa-lucia/gallery3.jpg,images/santa-lucia/gallery4.jpg,images/santa-lucia/gallery5.jpg">
         <div class="card-info">
             <h3>Santa Lucia | Sertania Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/8BZWGR" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/jack_cover.jpg" alt="Jack the Ripper Character Design">
+        <img src="images/jack/cover.jpg" alt="Jack the Ripper Character Design" data-gallery="images/jack/gallery1.jpg,images/jack/gallery2.jpg,images/jack/gallery3.jpg">
         <div class="card-info">
             <h3>Jack The Ripper | Horror in Whitechapel Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/rJ5O8O" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card hidden-card">
-        <img src="images/sophie_cover.jpg" alt="Sophie Character Design">
+        <img src="images/sophie/cover.jpg" alt="Sophie Character Design" data-gallery="images/sophie/gallery1.jpg,images/sophie/gallery2.jpg,images/sophie/gallery3.jpg">
         <div class="card-info">
             <h3>Sophie | Horror in Whitechapel Game</h3>
             <p>Character Design</p>
-            <a href="https://www.artstation.com/artwork/g0v1BP" target="_blank" class="btn primary">
-            Ver no ArtStation
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
@@ -603,96 +570,96 @@
     <div class="grid">
 
         <div class="card">
-          <img src="images/gatos_scenarios_pixel_cover.jpg" alt="Animações de cenário em pixel art">
+          <img src="images/gatos-scenarios/cover.jpg" alt="Animações de cenário em pixel art" data-gallery="images/gatos-scenarios/gallery1.gif,images/gatos-scenarios/gallery2.gif,images/gatos-scenarios/gallery3.gif,images/gatos-scenarios/gallery4.gif,images/gatos-scenarios/gallery5.gif,images/gatos-scenarios/gallery6.gif,images/gatos-scenarios/gallery7.gif">
           <div class="card-info">
               <h3>Gatos de Rua Game: Scenario Concepts</h3>
               <p>Environment Art Concept</p>
-              <a href="https://www.artstation.com/artwork/2Bo4we" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/gatos_cats_pixel_cover.jpg" alt="Animações de personagem em pixel art">
+          <img src="images/gatos-cats/cover.jpg" alt="Animações de personagem em pixel art" data-gallery="images/gatos-cats/gallery1.gif,images/gatos-cats/gallery2.jpg,images/gatos-cats/gallery3.jpg,images/gatos-cats/gallery4.jpg,images/gatos-cats/gallery5.jpg">
           <div class="card-info">
               <h3>Gatos de Rua Game: Cats Concepts</h3>
               <p>Character Design | Pixel Art Animations</p>
-              <a href="https://www.artstation.com/artwork/lG2XBz" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/gatos_characters_pixel_cover.jpg" alt="Animações de personagem em pixel art">
+          <img src="images/gatos-characters/cover.jpg" alt="Animações de personagem em pixel art" data-gallery="images/gatos-characters/gallery1.gif,images/gatos-characters/gallery2.jpg,images/gatos-characters/gallery3.jpg,images/gatos-characters/gallery4.jpg,images/gatos-characters/gallery5.jpg">
           <div class="card-info">
               <h3>Gatos de Rua Game: Character Concepts</h3>
               <p>Character Design | Pixel Art Animations</p>
-              <a href="https://www.artstation.com/artwork/bgyPyk" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/africano_pixel_cover.jpg" alt="Animações do personagem Africano em pixel art">
+          <img src="images/edu-africano/cover.jpg" alt="Animações do personagem Africano em pixel art" data-gallery="images/edu-africano/gallery1.gif,images/edu-africano/gallery2.gif">
           <div class="card-info">
               <h3>Edu Africano Breaking Dance Animations</h3>
               <p>Pixel Art Animations</p>
-              <a href="https://www.artstation.com/artwork/6LlPDV" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
         <div class="card">
-          <img src="images/isa_pixel_cover.jpg" alt="Animações da personagem Isa em pixel art">
+          <img src="images/isa/cover.jpg" alt="Animações da personagem Isa em pixel art" data-gallery="images/isa/gallery1.gif,images/isa/gallery2.gif,images/isa/gallery3.gif">
           <div class="card-info">
               <h3>Isa Breaking Dance Animations</h3>
               <p>Pixel Art Animations</p>
-              <a href="https://www.artstation.com/artwork/L4Z8al" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
         <div class="card">
-          <img src="images/shaolin_pixel_cover.jpg" alt="Animações do personagem Shaolin em pixel art">
+          <img src="images/shaolin/cover.jpg" alt="Animações do personagem Shaolin em pixel art" data-gallery="images/shaolin/gallery1.gif,images/shaolin/gallery2.gif,images/shaolin/gallery3.gif,images/shaolin/gallery4.jpg">
           <div class="card-info">
               <h3>Shaolin Breaking Dance Animations</h3>
               <p>Pixel Art Animations</p>
-              <a href="https://www.artstation.com/artwork/VJlPDn" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
         <div class="card">
-          <img src="images/pokemon_pixel_cover.jpg" alt="Sprites isométricos de pokemon em pixel art">
+          <img src="images/pokemon-fire-red/cover.jpg" alt="Sprites isométricos de pokemon em pixel art" data-gallery="images/pokemon-fire-red/gallery1.jpg,images/pokemon-fire-red/gallery2.jpg,images/pokemon-fire-red/gallery3.jpg,images/pokemon-fire-red/gallery4.jpg,images/pokemon-fire-red/gallery5.jpg,images/pokemon-fire-red/gallery6.jpg,images/pokemon-fire-red/gallery7.jpg,images/pokemon-fire-red/gallery8.jpg">
           <div class="card-info">
               <h3>Pokemon Fire Red Reimagined</h3>
               <p>Isometric Game Concept</p>
-              <a href="https://www.artstation.com/artwork/Ry86Zy" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
         <div class="card">
-          <img src="images/pokelike_pixel_cover.jpg" alt="Sprite de personagens estilo pokemon em pixel art">
+          <img src="images/pokelike/cover.jpg" alt="Sprite de personagens estilo pokemon em pixel art" data-gallery="images/pokelike/gallery1.gif,images/pokelike/gallery2.gif">
           <div class="card-info">
               <h3> Pokelike | Fakepokemon</h3>
               <p>Game Project</p>
-              <a href="https://www.artstation.com/artwork/zPwgk6" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
         <div class="card hidden-card">
-          <img src="images/popportal_pixel_cover.jpg" alt="Animações do jogo PopPortal em pixel art">
+          <img src="images/popportal/cover.jpg" alt="Animações do jogo PopPortal em pixel art" data-gallery="images/popportal/gallery1.gif,images/popportal/gallery2.gif">
           <div class="card-info">
               <h3>POP Portal Game </h3>
               <p>Pixel Art Animations | Sprites</p>
-              <a href="https://www.artstation.com/artwork/xDRgZX" target="_blank" class="btn primary">
-              Ver no ArtStation
-              </a>
+              <button type="button" class="btn primary">
+              Ver projeto
+              </button>
           </div>
         </div>
     </div>
@@ -711,35 +678,35 @@
     <div class="grid">
 
       <div class="card">
-        <img src="images/hiw_cover.jpg" alt="Horror in Whitechapel">
+        <img src="images/horror-in-whitechapel/cover.jpg" alt="Horror in Whitechapel" data-gallery="images/horror-in-whitechapel/gallery1.jpg,images/horror-in-whitechapel/gallery2.jpg,images/horror-in-whitechapel/gallery3.jpg,images/horror-in-whitechapel/gallery4.jpg,images/horror-in-whitechapel/gallery5.jpg,images/horror-in-whitechapel/gallery6.jpg,images/horror-in-whitechapel/gallery7.jpg,images/horror-in-whitechapel/gallery8.jpg,images/horror-in-whitechapel/gallery9.jpg,images/horror-in-whitechapel/gallery10.jpg,images/horror-in-whitechapel/gallery11.jpg,images/horror-in-whitechapel/gallery12.jpg,images/horror-in-whitechapel/gallery13.jpg,images/horror-in-whitechapel/gallery14.jpg,images/horror-in-whitechapel/gallery15.jpg,images/horror-in-whitechapel/gallery16.jpg,images/horror-in-whitechapel/gallery17.jpg,images/horror-in-whitechapel/gallery18.jpg,images/horror-in-whitechapel/gallery19.jpg">
         <div class="card-info">
             <h3>Horror in Whitechapel</h3>
             <p>Game UI & Visual Identity</p>
-            <a href="https://www.behance.net/gallery/244441983/Horror-in-Whitechapel-Game-UI-Visual-Identity" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/coup_zodiac_cover.jpg" alt="Coup Zodiac">
+        <img src="images/coup-zodiac/cover.jpg" alt="Coup Zodiac" data-gallery="images/coup-zodiac/gallery1.jpg,images/coup-zodiac/gallery2.jpg,images/coup-zodiac/gallery3.jpg,images/coup-zodiac/gallery4.jpg,images/coup-zodiac/gallery5.jpg,images/coup-zodiac/gallery6.jpg,images/coup-zodiac/gallery7.jpg">
         <div class="card-info">
             <h3>Coup Zodiac</h3>
             <p>Game Concept | UI App Mobile </p>
-            <a href="https://www.behance.net/gallery/130515807/Coup-Zodiac-Game-Concept" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/wonder_sky_cover.jpg" alt="Wonder Sky">
+        <img src="images/wonder-sky/cover.jpg" alt="Wonder Sky" data-gallery="images/wonder-sky/gallery1.jpg,images/wonder-sky/gallery2.jpg,images/wonder-sky/gallery3.jpg,images/wonder-sky/gallery4.jpg,images/wonder-sky/gallery5.gif">
         <div class="card-info">
             <h3>Wonder Sky</h3>
             <p>Game Concept | UI App Mobile</p>
-            <a href="https://www.behance.net/gallery/59438643/Wander-Sky-Game-Concept" target="_blank" class="btn primary">
-            Ver no Behance
-            </a>
+            <button type="button" class="btn primary">
+            Ver projeto
+            </button>
         </div>
       </div>
 
@@ -752,45 +719,45 @@
     <div class="grid">
 
       <div class="card">
-        <img src="images/gatos_game_cover.jpg" alt="Gatos de Rua Game">
+        <img src="images/gatos-game/cover.jpg" alt="Gatos de Rua Game" data-gallery="images/gatos-game/cover.jpg">
         <div class="card-info">
             <h3>Gatos de Rua Game</h3>
             <p>Link do Jogo</p>
             <a href="https://rebuild-studio.itch.io/gatos-de-rua" target="_blank" class="btn primary">
-            Ver no Itch.io
+            Ver projeto
             </a>
         </div>
-      </div>  
-
+      </div> 
+      
       <div class="card">
-        <img src="images/sertania_game_cover.jpg" alt="Sertania Game">
+        <img src="images/sertania/cover.jpg" alt="Sertania Game" data-gallery="images/sertania/cover.jpg">
         <div class="card-info">
             <h3>Sertania Game</h3>
             <p>Link do Jogo</p>
             <a href="https://rebuild-studio.itch.io/sertania" target="_blank" class="btn primary">
-            Ver no Itch.io
+            Ver projeto
             </a>
         </div>
       </div>       
-      
+
       <div class="card">
-        <img src="images/fortal_game_cover.jpg" alt="FortalStep Game">
+        <img src="images/fortalstep/cover.jpg" alt="FortalStep Game" data-gallery="images/fortalstep/cover.jpg">
         <div class="card-info">
             <h3>FortalStep - Prototype</h3>
             <p>Link do Jogo</p>
             <a href="https://pedro-gustavo-pgzim.itch.io/fortalstep" target="_blank" class="btn primary">
-            Ver no Itch.io
+            Ver projeto
             </a>
         </div>
       </div>
 
       <div class="card">
-        <img src="images/hiw_game_cover.jpg" alt="Horror in Whitechapel Game">
+        <img src="images/hiw-game/cover.jpg" alt="Horror in Whitechapel Game" data-gallery="images/hiw-game/cover.jpg">
         <div class="card-info">
             <h3>Horror in Whitechapel - Game</h3>
             <p>Link do Jogo</p>
             <a href="https://igda-fortaleza.itch.io/horror-in-whitechapel" target="_blank" class="btn primary">
-            Ver no Itch.io
+            Ver projeto
             </a>
         </div>
       </div>
@@ -799,12 +766,33 @@
   </div>
 </section>
 
+<div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-card">
+    <button class="modal-close" id="project-modal-close" aria-label="Fechar modal">×</button>
+    <div class="modal-slide">
+      <img src="" alt="" id="modal-image">
+    </div>
+    <div class="modal-footer">
+      <div>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-arrow" id="modal-prev" aria-label="Imagem anterior">←</button>
+        <button class="modal-arrow" id="modal-next" aria-label="Próxima imagem">→</button>
+      </div>
+    </div>
+    <div class="modal-dots" id="modal-dots" aria-label="Navegação do carrossel"></div>
+  </div>
+</div>
+
 <section class="cta-final" id="contato">
   <h2>Tem um projeto em mente?</h2>
   <p>Entre em contato comigo por email 👇</p>
 
   <div class="email-box">
-    <span id="email-text" aria-label="Email para contato">douguisillva@gmail.com</span>
+    <span id="email-text" aria-label="Email para contato">douglassilvaart@gmail.com</span>
     <button id="copy-email" class="btn secondary" aria-label="Copiar email">Copiar</button>
   </div>
 </section>
@@ -820,3 +808,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+

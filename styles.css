@@ -45,7 +45,7 @@ body {
 .hero{padding:60px 20px 40px 20px;text-align:center;}
 .hero-content{display:flex;flex-direction:column;align-items:center;gap:20px;}
 .hero .profile img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--primary-color);}
-.role{font-size:1.1rem;color:#777;}
+.role{font-size:1.1rem;color:var(--text-color);}
 .cta{margin-top:20px;display:flex;gap:15px;}
 
 .btn,
@@ -102,7 +102,7 @@ button:focus{
 .skills-tags span{
   display:inline-block;
   background:#f1f3f5;
-  color: #333;
+  color: var(--text-color);
   padding: 8px 12px;
   margin:3px;
   border-radius:20px;
@@ -128,7 +128,7 @@ button:focus{
   text-transform: uppercase;
   font-size:0.85rem;
   letter-spacing:0.5px;
-  color:#888; /* cinza */
+  color:var(--text-color);
 }
 
 .tab-btn:hover{
@@ -364,7 +364,7 @@ textarea:focus {
 .skills-tags.idiomas span {
   display: inline-block;
   background: #f1f3f5;
-  color: #333;
+  color: var(--text-color);
   padding: 8px 12px;
   border-radius: 20px;
   font-size: 14px;
@@ -396,6 +396,12 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 8px; /* espaço entre bandeira e texto */
+}
+
+/* Dark mode: manter texto das badges em preto */
+body.dark .skills-tags span,
+body.dark .skills-tags.idiomas span {
+  color: #000;
 }
 
 .skills-tags.idiomas .flag {
@@ -448,13 +454,13 @@ textarea:focus {
 
 .md-card-company {
   font-weight: 500;
-  color: #555;
+  color: var(--text-color);
   margin-bottom: 0.25rem;
 }
 
 .md-card-dates {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
@@ -493,6 +499,150 @@ textarea:focus {
   justify-content: center;
 }
 
+.project-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10050;
+}
+
+.project-modal.active {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(95vw, 900px);
+  max-height: 90vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+  z-index: 10051;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 10052;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-slide {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.modal-slide img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 24px 14px;
+  background: var(--secondary-bg);
+}
+
+.modal-footer h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.modal-footer p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-arrow {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-arrow:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.modal-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 0 18px;
+  background: var(--secondary-bg);
+}
+
+.modal-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dots button.active {
+  background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .modal-card {
+    width: 95vw;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -505,9 +655,9 @@ body.dark .md-card {
 }
 
 body.dark .md-card-company {
-  color: #ddd;
+  color: var(--text-color);
 }
 
 body.dark .md-card-dates {
-  color: #aaa;
+  color: var(--text-color);
 }
