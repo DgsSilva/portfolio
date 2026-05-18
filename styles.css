@@ -519,6 +519,41 @@ body.dark .skills-tags.idiomas span {
   backdrop-filter: blur(3px);
 }
 
+.project-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10052;
+}
+
+.project-prev {
+  left: 18px;
+}
+
+.project-next {
+  right: 18px;
+}
+
+.project-nav img {
+  width: 24px;
+  height: 24px;
+}
+
+.project-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .modal-card {
   position: relative;
   width: min(95vw, 900px);
