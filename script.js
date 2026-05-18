@@ -141,9 +141,13 @@ const modalDescription = document.getElementById('modal-description');
 const modalPrev = document.getElementById('modal-prev');
 const modalNext = document.getElementById('modal-next');
 const modalDots = document.getElementById('modal-dots');
+const projectPrevBtn = document.getElementById('project-prev');
+const projectNextBtn = document.getElementById('project-next');
 
 let currentGallery = [];
 let currentIndex = 0;
+let currentProjectCards = [];
+let currentProjectIndex = 0;
 
 function updateModal() {
   const imageUrl = currentGallery[currentIndex];
@@ -165,14 +169,23 @@ function updateModal() {
   });
 }
 
-function openProjectModal(images, title, description) {
+function updateProjectNavigation() {
+  if (!currentProjectCards.length) return;
+  projectPrevBtn.disabled = currentProjectIndex <= 0;
+  projectNextBtn.disabled = currentProjectIndex >= currentProjectCards.length - 1;
+}
+
+function openProjectModal(images, title, description, projectCards = [], projectIndex = 0) {
   currentGallery = images;
   currentIndex = 0;
+  currentProjectCards = projectCards;
+  currentProjectIndex = projectIndex;
   modalTitle.textContent = title;
   modalDescription.textContent = description;
   projectModal.classList.add('active');
   projectModal.removeAttribute('hidden');
   updateModal();
+  updateProjectNavigation();
 }
 
 function closeProjectModal() {
@@ -193,11 +206,36 @@ modalNext.addEventListener('click', () => {
   updateModal();
 });
 
+function changeProject(direction) {
+  const nextIndex = currentProjectIndex + direction;
+  if (nextIndex < 0 || nextIndex >= currentProjectCards.length) return;
+
+  const card = currentProjectCards[nextIndex];
+  if (!card) return;
+
+  const img = card.querySelector('img');
+  if (!img) return;
+
+  const gallery = img.dataset.gallery
+    ? img.dataset.gallery.split(',').map(path => path.trim()).filter(Boolean)
+    : [img.src];
+  const title = card.querySelector('h3')?.textContent || '';
+  const description = card.querySelector('p')?.textContent || '';
+
+  openProjectModal(gallery, title, description, currentProjectCards, nextIndex);
+}
+
+projectPrevBtn.addEventListener('click', () => changeProject(-1));
+projectNextBtn.addEventListener('click', () => changeProject(1));
+
 document.querySelectorAll('#projetos .card button.btn.primary').forEach(btn => {
   btn.addEventListener('click', (event) => {
     event.preventDefault();
     const card = btn.closest('.card');
     if (!card) return;
+    const activeTab = document.querySelector('.tab-content.active');
+    const projectCards = activeTab ? Array.from(activeTab.querySelectorAll('.card')) : Array.from(document.querySelectorAll('#projetos .card'));
+    const currentProjectIndex = projectCards.indexOf(card);
     const img = card.querySelector('img');
     if (!img) return;
     const gallery = img.dataset.gallery
@@ -205,7 +243,7 @@ document.querySelectorAll('#projetos .card button.btn.primary').forEach(btn => {
       : [img.src];
     const title = card.querySelector('h3')?.textContent || '';
     const description = card.querySelector('p')?.textContent || '';
-    openProjectModal(gallery, title, description);
+    openProjectModal(gallery, title, description, projectCards, currentProjectIndex);
   });
 });
 
