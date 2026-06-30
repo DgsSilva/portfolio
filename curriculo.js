@@ -140,8 +140,8 @@ Inglês: Intermediário`,
   const exp = [
     {
       title: 'Artista 2D/Animador 2D e UI/UX Designer',
-      company: 'Rebuild! Gam Studio',
-      desc: `Nov de 2024 - Atualmente · Fortaleza, CE, Brasil
+      company: 'Rebuild! Game Studio',
+      desc: `Nov de 2024 - Jun de 2026 · Fortaleza, CE, Brasil
 
 Trabalho nos vários jogos do estúdio Rebuild, fazendo concept art dos personagens, sprites e animações em Pixel Art, e também trabalho como UI/UX Designer de alguns projetos.`
     },
